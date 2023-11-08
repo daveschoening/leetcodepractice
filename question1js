@@ -1,0 +1,21 @@
+/**
+ * @param {number[]} nums
+ * @param {number} target
+ * @return {number[]}
+ */
+var twoSum = function(nums, target) {
+    let addnums = [];
+    for (let index in nums) {
+        let t = nums[index];
+        let x = target - t
+        if (nums.includes(x) && index != nums.indexOf(x)) {
+            let val = nums.indexOf(x);
+            let add1 = parseInt(val);
+            let add2 = parseInt(index);
+            addnums.push(add2);
+            addnums.push(add1);
+            return addnums;
+            break;
+        }
+    }
+}
